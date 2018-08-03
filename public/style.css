@@ -1,0 +1,17 @@
+const getUnix = (param) => {
+  let UNIX = Date.parse(param);
+  if (UNIX) {
+    return UNIX;
+  } else {
+    return parseInt(param);
+  }
+}
+
+const getUTC = (param) => {
+
+  if(typeof param === "string"){
+    return new Date(param).toUTCString();
+  }else if (typeof param === "number"){
+    return new Date(param).toUTCString();
+  }  
+}
